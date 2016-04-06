@@ -1,4 +1,8 @@
+<%= link_to "Back to Pictures", pictures_url %>
+<!-- link_to is rails helper tag to link to things.... first input is the name /// the next is where to -->
 <p>
   <%= @picture.title %>, <%= @picture.artist %>
 </p>
-<img src="<%= @picture.url %>">
+<!-- <img src="<%= @picture.url %>"> -->
+<!-- Using a helper tag like in index.html.erb /// using the iamge_tag -->
+<%= image_tag @picture.url %>

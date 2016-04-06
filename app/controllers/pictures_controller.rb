@@ -20,6 +20,7 @@ class PicturesController < ApplicationController
       # otherwise render the view associated with the action :new (i.e. new.html.erb)
 
       render :new
+    end
     # render :text => "Saving a picture. URLL #{params[:url]}, Title: #{params[:title]}, Artist: #{params[:artist]}"
     # commented the previous version of create which was only rendering text provided
   end
@@ -28,5 +29,5 @@ class PicturesController < ApplicationController
   def picture_params
     params.require(:picture).permit(:artist, :title, :url)
   end
-  
+
 end

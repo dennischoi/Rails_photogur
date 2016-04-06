@@ -1,1 +1,9 @@
 <h1>SUCCESS!!</h1>
+
+<% @pictures.each do |picture| %>
+  <p>
+      <%= picture.title %>, <%= picture.artist %>
+      <!-- = sign outputs a ruby code into the server // without = doesn't output -->
+  </p>
+  <img src="<%= picture.url %>">
+  <% end %>

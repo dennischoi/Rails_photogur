@@ -1,17 +1,28 @@
 Rails.application.routes.draw do
   root 'pictures#index'
-  get 'pictures' => 'pictures#index'
+  # get 'pictures' => 'pictures#index'
+  #
+  # post 'pictures' => 'pictures#create'
+  #
+  # # edit link through id
+  # get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture"
+  # patch 'pictures/:id' => "pictures#update"
+  #
+  # get 'pictures/new' => 'pictures#new'
+  #
+  # get 'pictures/:id' => 'pictures#show', as: 'picture'
+  #
+  # delete 'pictures/:id' => 'pictures#destroy', as: 'delete_picture'
+  #
 
-  # edit link through id
-  get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture"
-  patch 'pictures/:id' => "pictures#update"
+ # Using the ReSTful routing ie. Resourcful Routing all the above commented shit can be put through resource
 
-  post 'pictures' => 'pictures#create'
-  get 'pictures/new' => 'pictures#new'
+  resources :pictures
+  # Follows the CRUD principle
 
-  get 'pictures/:id' => 'pictures#show', as: 'picture'
 
-  delete 'pictures/:id' => 'pictures#destroy', as: 'delete_picture'
+
+
 
 
 
